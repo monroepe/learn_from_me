@@ -17,4 +17,7 @@
 //= require pickadate/picker.date
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  $(document).foundation();
+  $('#course_start_date').pickadate();
+});
