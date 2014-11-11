@@ -1,3 +1,9 @@
 <h1><%= @subject.name %></h1>
 
+<ul>
+  <% @courses.each do |course| %>
+    <li><%= link_to course.name, subject_course_path(@subject, course) %></li>
+  <% end %>
+</ul>
+
 <p><%= link_to "Back to subjects", subjects_path %></p>
