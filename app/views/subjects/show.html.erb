@@ -2,7 +2,7 @@
 
 <ul>
   <% @courses.each do |course| %>
-    <li><%= link_to course.name, subject_course_path(@subject, course) %></li>
+    <li><%= link_to course.name, course_path(course) %></li>
   <% end %>
 </ul>
 

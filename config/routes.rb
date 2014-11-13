@@ -3,7 +3,5 @@ Rails.application.routes.draw do
 
   resources :subjects, only: [:index, :show]
 
-  resources :subjects, only: [] do
-    resources :courses
-  end
+  resources :courses
 end

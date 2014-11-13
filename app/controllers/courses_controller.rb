@@ -8,17 +8,15 @@ class CoursesController < ApplicationController
   end
 
   def new
-    @subject = Subject.find(params[:subject_id])
-    @course = @subject.courses.new
+    @course = Course.new
   end
 
   def create
-    @subject = Subject.find(params[:subject_id])
-    @course = @subject.courses.new(course_params)
+    @course = Course.new(course_params)
     @course.user_id = 1
 
     if @course.save
-      redirect_to subject_course_path(@subject, @course), notice: "Course created successfully!"
+      redirect_to course_path(@course), notice: "Course created successfully!"
     else
       render "new"
     end
