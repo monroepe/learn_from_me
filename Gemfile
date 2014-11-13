@@ -9,13 +9,14 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-gem "bullet", group: :development
+gem 'bullet', group: :development
 gem 'quiet_assets', group: :development
 gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'foundation-rails', '5.4.3.1'
 gem 'simple_form'
 gem 'pickadate-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'capybara'
