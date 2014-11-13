@@ -23,15 +23,25 @@ class CoursesController < ApplicationController
   end
 
   def edit
-
+    @course = Course.find(params[:id])
   end
 
   def update
+    @course = Course.find(params[:id])
 
+    if @course.update(course_params)
+      redirect_to course_path(@course), notice: "Course updated successfully!"
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    @course = Course.find(params[:id])
 
+    @course.destroy
+
+    redirect_to subjects_path, notice: "Course deleted successfully!"
   end
 
   private
