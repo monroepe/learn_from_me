@@ -1,0 +1,24 @@
+<%= simple_form_for course do |f| %>
+
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name %>
+  <%= f.association :subject, collection: Subject.all, prompt: "Choose a Subject" %>
+  <%= f.input :start_date, as: :string, input_html: { class: "datepicker" }, label: "Start Date" %>
+  <%= f.input :duration %>
+  <%= f.input :level_id %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+
+  <%= f.button :submit %>
+<% end %>

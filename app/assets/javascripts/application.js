@@ -12,4 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
+//= require pickadate/picker
+//= require pickadate/picker.date
 //= require_tree .
+
+$(function(){
+  $(document).foundation();
+  $('#course_start_date').pickadate();
+});

@@ -13,6 +13,9 @@ gem "bullet", group: :development
 gem 'quiet_assets', group: :development
 gem 'rails_12factor', group: :production
 gem 'unicorn'
+gem 'foundation-rails', '5.4.3.1'
+gem 'simple_form'
+gem 'pickadate-rails'
 
 group :development, :test do
   gem 'capybara'
