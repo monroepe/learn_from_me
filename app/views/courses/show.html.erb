@@ -1,7 +1,21 @@
-<h1><%= @course.name %></h1>
+<h1><%= @course.name %> (<%= @course.level.name %>)</h1>
 
-<h3><%= @course.price %></h3>
+<h3>Price:
+<% if @course.price == 0 %>
+  Free
+<% else %>
+  <%= number_to_currency(@course.price, precision: 2) %>
+<% end %>
+</h3>
 
-<h4><%= @course.description %></h4>
+<h4>
+<% if @course.start_date %>
+  Starts: <%= @course.start_date.strftime("%m/%d/%Y") %>
+<% end %>
+</h4>
 
-<p><%= link_to "Back to Courses", subject_path(@course.subject) %></p>
+<h4>Description: <%= @course.description %></h4>
+
+<h4>Taught By: <%= @course.user.first_name %> <%= @course.user.last_name %></h4>
+
+<p><%= link_to "Other " + @course.subject.name + " Courses", subject_path(@course.subject) %></p>
