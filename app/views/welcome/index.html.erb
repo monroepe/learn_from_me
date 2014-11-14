@@ -1,3 +1,7 @@
 <h1>Learn From Me</h1>
 
-<h3><%= link_to "Subjects", subjects_path %></h3>
+<h3>Recent Courses</h3>
+
+<% @courses.each do |course| %>
+  <li><%= link_to course.name, course_path(course) %> (<%= link_to course.subject.name, subject_path(course.subject) %>)</li>
+<% end %>
