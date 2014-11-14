@@ -5,7 +5,7 @@ class CreateCourses < ActiveRecord::Migration
       t.integer :subject_id, null: false
       t.integer :user_id, null: false
       t.date :start_date
-      t.integer :duration
+      t.string :duration
       t.integer :level_id, null: false
       t.float :price, null: false
       t.text :description, null: false
