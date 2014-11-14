@@ -13,3 +13,5 @@ Course.create([
                 description: "A free Russian course for people who want to start speaking Russian. The focus is being able to communicate in Russian."
                }
               ])
+
+Level.create([{ name: "Beginner" }, { name: "Intermediate" }, { name: "Advanced" }])
