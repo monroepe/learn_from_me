@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
-
 gem 'rails', '4.1.6'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -19,6 +17,7 @@ gem 'foundation-rails', '5.4.3.1'
 gem 'simple_form'
 gem 'pickadate-rails'
 gem 'devise'
+gem 'kaminari'
 
 group :development, :test do
   gem 'capybara'

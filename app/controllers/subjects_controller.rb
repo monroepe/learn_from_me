@@ -1,11 +1,11 @@
 class SubjectsController < ApplicationController
   def index
-    @subjects = Subject.order(:name)
+    @subjects = Subject.all
   end
 
   def show
     @subject = Subject.find(params[:id])
-    @courses = @subject.courses
+    @courses = @subject.courses.page(params[:page])
   end
 
   private

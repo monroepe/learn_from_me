@@ -1,6 +1,6 @@
-Subject.create([{ name: "Math" }, { name: "Science" }, { name: "Economics and Finance" },
-                { name: "Art and Music" }, { name: "Humanities" }, { name: "Programming/Computer Science" },
-                { name: "Languages" }, { name: "Exercise and Dance" }, { name: "Everything Else" }
+Subject.create([{ name: "Math" }, { name: "Science" }, { name: "Programming/Computer Science" },
+                { name: "Economics and Finance" }, { name: "Languages" }, { name: "Art and Music" },
+                { name: "Exercise and Dance" }, { name: "Humanities" }, { name: "Everything Else" }
                 ])
 
 Course.create([
