@@ -16,6 +16,8 @@
 
 <h4>Description: <%= @course.description %></h4>
 
-<h4>Taught By: <%= @course.user.first_name %> <%= @course.user.last_name %></h4>
+<h4>Taught By: <%= link_to @course.user.first_name + " " + @course.user.last_name, user_path(@course.user) %></h4>
+
+<h3>Reviews: </h3>
 
 <p><%= link_to "Other " + @course.subject.name + " Courses", subject_path(@course.subject) %></p>
