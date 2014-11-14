@@ -6,4 +6,7 @@
   <% end %>
 </ul>
 
-<p><%= link_to "Back to subjects", subjects_path %></p>
+<%= paginate @courses, window: 2 %>
+
+<p><%= link_to "Add a course", new_course_path %></p>
+

@@ -19,6 +19,7 @@ gem 'foundation-rails', '5.4.3.1'
 gem 'simple_form'
 gem 'pickadate-rails'
 gem 'devise'
+gem 'kaminari'
 
 group :development, :test do
   gem 'capybara'

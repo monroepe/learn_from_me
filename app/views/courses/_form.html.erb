@@ -13,7 +13,7 @@
   <% end %>
 
   <%= f.input :name %>
-  <%= f.association :subject, collection: Subject.order(:name), prompt: "Choose a Subject" %>
+  <%= f.association :subject, collection: Subject.all, prompt: "Choose a Subject" %>
   <%= f.input :start_date, as: :string, input_html: { class: "datepicker" }, label: "Start Date" %>
   <%= f.input :duration %>
   <%= f.association :level, collection: Level.all, prompt: "Choose a Level" %>
