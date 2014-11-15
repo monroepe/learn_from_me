@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20141114212109) do
     t.integer  "subject_id",  null: false
     t.integer  "user_id",     null: false
     t.date     "start_date"
-    t.integer  "duration"
+    t.string   "duration"
     t.integer  "level_id",    null: false
     t.float    "price",       null: false
     t.text     "description", null: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20141114212109) do
   end
 
   create_table "reviews", force: true do |t|
+    t.integer  "rating",          null: false
     t.text     "body",            null: false
     t.integer  "user_id",         null: false
     t.integer  "reviewable_id",   null: false
