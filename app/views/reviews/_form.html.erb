@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-  <%= f.input :rating %>
+  <%= f.input :rating, collection: (1..5), prompt: "Choose a rating" %>
   <%= f.input :body %>
 
   <%= f.button :submit %>
