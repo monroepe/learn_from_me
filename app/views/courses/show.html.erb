@@ -19,5 +19,14 @@
 <h4>Taught By: <%= link_to @course.user.first_name + " " + @course.user.last_name, user_path(@course.user) %></h4>
 
 <h3>Reviews: </h3>
+<p><%= link_to "Add a review", new_course_review_path(@course) %></p>
 
+<% @course.reviews.each do |review| %>
+  <li>
+  <%= review.rating %> <br />
+  <%= review.body %> -- <%= review.user.first_name %> <%= review.user.last_name %>
+  </li>
+<% end %>
+
+<br />
 <p><%= link_to "Other " + @course.subject.name + " Courses", subject_path(@course.subject) %></p>

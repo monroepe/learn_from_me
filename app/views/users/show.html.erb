@@ -7,3 +7,11 @@
 
 <br />
 <h3>Reviews: </h3>
+<p><%= link_to "Add a review", new_user_review_path(@user) %></p>
+
+<% @user.reviews.each do |review| %>
+  <li>
+  <%= review.rating %> <br />
+  <%= review.body %> -- <%= review.user.first_name %> <%= review.user.last_name %>
+  </li>
+<% end %>
