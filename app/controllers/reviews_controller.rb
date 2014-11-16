@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      redirect_to @reviewable, notice: "Review created successfully"
+      redirect_to @reviewable, notice: "Review created successfully!"
     else
       render "new"
     end
@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
 
     if @review.update(review_params)
-      redirect_to @reviewable, notice: "Review updated successfully"
+      redirect_to @reviewable, notice: "Review updated successfully!"
     else
       render "edit"
     end
