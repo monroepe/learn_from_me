@@ -18,6 +18,23 @@ feature "Create course" do
     expect(page).to have_content "Course created successfully!"
   end
 
+  scenario "user creates free course succesfully" do
+    subject = FactoryGirl.create(:subject)
+    level = FactoryGirl.create(:level)
+    user = FactoryGirl.create(:user)
+    sign_in_as(user)
+
+    visit new_course_path
+    fill_in "Name", with: "Speaking Russian"
+    select(subject.name, from: "Subject")
+    select(level.name, from: "Level")
+    fill_in "Price", with: 0
+    fill_in "Description", with: "Russian language course with focus on speaking"
+    click_on "Create Course"
+
+    expect(page).to have_content "Free"
+  end
+
   scenario "user fails to creates course succesfully - blank" do
     user = FactoryGirl.create(:user)
     sign_in_as(user)
