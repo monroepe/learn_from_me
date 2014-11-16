@@ -13,5 +13,10 @@
   <li>
   <%= review.rating %> <br />
   <%= review.body %> -- <%= review.user.first_name %> <%= review.user.last_name %>
+  <% if current_user == review.user %>
+    <%= link_to "Edit Review", edit_user_review_path(@user, review) %> |
+    <%= link_to "Delete Review", user_review_path(@user, review),
+  method: :delete, data: { confirm: "Are your sure?" } %>
+  <% end %>
   </li>
 <% end %>
