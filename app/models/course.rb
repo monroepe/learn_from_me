@@ -6,4 +6,12 @@ class Course < ActiveRecord::Base
 
   validates :name, :subject_id, :user_id, :level_id, :price, :description, presence: true
   validates :name, uniqueness: true
+
+  def self.search(search)
+    if search
+      where("name ILIKE?", "%#{search}%")
+    else
+      all
+    end
+  end
 end

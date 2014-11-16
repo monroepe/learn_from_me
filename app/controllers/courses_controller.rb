@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @courses =  Course.order(:name).page(params[:page])
+    @courses =  Course.search(params[:search]).order(:name).page(params[:page])
   end
 
   def show
