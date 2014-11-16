@@ -43,14 +43,14 @@
         1,
         null,
         1,
-        38,
+        40,
         null,
         null
       ],
       "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/controllers/welcome_controller.rb": [
         1,
         1,
-        19,
+        20,
         null,
         null
       ],
@@ -82,19 +82,19 @@
         null,
         null,
         1,
-        7,
+        8,
         null,
         null,
         1,
-        7,
+        8,
         null,
         null,
         1,
-        7,
-        7,
+        8,
+        8,
         null,
-        7,
-        1,
+        8,
+        2,
         null,
         6,
         null,
@@ -125,7 +125,7 @@
         1,
         null,
         1,
-        11,
+        12,
         null,
         null
       ],
@@ -220,6 +220,6 @@
         null
       ]
     },
-    "timestamp": 1416178452
+    "timestamp": 1416178632
   }
 }
