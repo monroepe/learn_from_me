@@ -27,9 +27,9 @@
 <h3>Reviews: </h3>
 <p><%= link_to "Add a review", new_course_review_path(@course) %></p>
 
-<% @course.reviews.each do |review| %>
+<% @reviews.each do |review| %>
   <li>
-  <%= review.rating %> <br />
+  <%= review.rating %> (of 5) Stars<br />
   <%= review.body %> -- <%= review.user.first_name %> <%= review.user.last_name %>
   <% if current_user == review.user %>
     <%= link_to "Edit Review", edit_course_review_path(@course, review) %> |

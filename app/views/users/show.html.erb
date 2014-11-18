@@ -9,9 +9,9 @@
 <h3>Reviews: </h3>
 <p><%= link_to "Add a review", new_user_review_path(@user) %></p>
 
-<% @user.reviews.each do |review| %>
+<% @reviews.each do |review| %>
   <li>
-  <%= review.rating %> <br />
+  <%= review.rating %> (of 5) Stars<br />
   <%= review.body %> -- <%= review.user.first_name %> <%= review.user.last_name %>
   <% if current_user == review.user %>
     <%= link_to "Edit Review", edit_user_review_path(@user, review) %> |
