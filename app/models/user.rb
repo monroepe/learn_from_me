@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :courses, dependent: :destroy
   has_many :reviews, as: :reviewable, dependent: :destroy
+  has_many :class_members, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

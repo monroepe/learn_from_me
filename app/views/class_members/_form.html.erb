@@ -1,0 +1,19 @@
+<%= simple_form_for [course, class_member] do |f| %>
+
+  <% if class_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(class_member.errors.count, "error") %> prohibited this class_member from being saved:</h2>
+
+      <ul>
+      <% class_member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :qualifications %>
+  <%= f.input :reason_for_joining %>
+
+  <%= f.button :submit %>
+<% end %>

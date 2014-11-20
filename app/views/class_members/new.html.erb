@@ -1,0 +1,5 @@
+<h1>Join <%= @course.name %></h1>
+
+<%= render "class_members/form", course: @course, class_member: @class_member %>
+
+<%= link_to "Home", root_path %>
