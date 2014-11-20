@@ -26,7 +26,7 @@ class ClassMembersController < ApplicationController
 
   def destroy
     @course = Course.find(params[:course_id])
-    @class_member = ClassMember.where(user: current_user)
+    @class_member = ClassMember.where(user: current_user, course: @course).first
 
     @class_member.destroy
 
