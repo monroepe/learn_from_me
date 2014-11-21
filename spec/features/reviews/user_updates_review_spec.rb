@@ -8,7 +8,7 @@ feature "Update review" do
     visit edit_course_review_path(review.reviewable, review)
     select(5, from: "Rating")
     fill_in "Body", with: "Great course"
-    click_on "Update Review"
+    click_on "Submit"
 
     expect(page).to have_content "Review updated successfully!"
   end
@@ -19,7 +19,7 @@ feature "Update review" do
 
     visit edit_course_review_path(review.reviewable, review)
     fill_in "Body", with: ""
-    click_on "Update Review"
+    click_on "Submit"
 
     expect(page).to have_content "Body can't be blank"
   end

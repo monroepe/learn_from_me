@@ -13,7 +13,7 @@ feature "Create course" do
     select(level.name, from: "Level")
     fill_in "Price", with: 0
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Course created successfully!"
   end
@@ -30,7 +30,7 @@ feature "Create course" do
     select(level.name, from: "Level")
     fill_in "Price", with: 0
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Free"
   end
@@ -40,7 +40,7 @@ feature "Create course" do
     sign_in_as(user)
 
     visit new_course_path
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "can't be blank"
   end
@@ -56,7 +56,7 @@ feature "Create course" do
     select(level.name, from: "Level")
     fill_in "Price", with: 0
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Name can't be blank"
   end
@@ -71,7 +71,7 @@ feature "Create course" do
     select(level.name, from: "Level")
     fill_in "Price", with: 0
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Subject can't be blank"
   end
@@ -86,7 +86,7 @@ feature "Create course" do
     select(subject.name, from: "Subject")
     fill_in "Price", with: 0
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Level can't be blank"
   end
@@ -102,7 +102,7 @@ feature "Create course" do
     select(subject.name, from: "Subject")
     select(level.name, from: "Level")
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Price can't be blank"
   end
@@ -118,7 +118,7 @@ feature "Create course" do
     select(subject.name, from: "Subject")
     select(level.name, from: "Level")
     fill_in "Price", with: 0
-    click_on "Create Course"
+    click_on "Submit"
 
     expect(page).to have_content "Description can't be blank"
   end

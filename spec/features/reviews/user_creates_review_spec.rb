@@ -8,7 +8,7 @@ feature "Create review" do
     visit new_course_review_path(course)
     select(5, from: "Rating")
     fill_in "Body", with: "Great course"
-    click_on "Create Review"
+    click_on "Submit"
 
     expect(page).to have_content "Review created successfully!"
   end
@@ -18,7 +18,7 @@ feature "Create review" do
     sign_in_as(course.user)
 
     visit new_course_review_path(course)
-    click_on "Create Review"
+    click_on "Submit"
 
     expect(page).to have_content "can't be blank"
   end
@@ -29,7 +29,7 @@ feature "Create review" do
 
     visit new_course_review_path(course)
     fill_in "Body", with: "Great course"
-    click_on "Create Review"
+    click_on "Submit"
 
     expect(page).to have_content "Rating can't be blank"
   end
@@ -40,7 +40,7 @@ feature "Create review" do
 
     visit new_course_review_path(course)
     select(5, from: "Rating")
-    click_on "Create Review"
+    click_on "Submit"
 
     expect(page).to have_content "Body can't be blank"
   end
