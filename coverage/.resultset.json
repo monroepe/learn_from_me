@@ -5,6 +5,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -16,7 +17,27 @@
         1,
         null
       ],
-      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/subject.rb": [
+      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/course.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/level.rb": [
         1,
         1,
         null,
@@ -24,7 +45,7 @@
         1,
         null
       ],
-      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/level.rb": [
+      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/subject.rb": [
         1,
         1,
         null,
@@ -43,34 +64,66 @@
         1,
         null,
         1,
-        40,
+        46,
         null,
         null
       ],
       "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/controllers/welcome_controller.rb": [
         1,
         1,
-        20,
+        23,
         null,
         null
       ],
-      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/course.rb": [
+      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/controllers/class_members_controller.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         1,
         1,
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        null,
         1,
         null,
         1,
-        0,
-        0,
+        2,
         null,
-        0,
+        null
+      ],
+      "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/models/class_member.rb": [
+        1,
+        1,
+        1,
         null,
-        null,
+        1,
         null
       ],
       "/Users/peter/Dropbox/launchacademy/projects/learn_from_me/app/controllers/courses_controller.rb": [
@@ -82,7 +135,8 @@
         null,
         null,
         1,
-        8,
+        11,
+        11,
         null,
         null,
         1,
@@ -220,6 +274,6 @@
         null
       ]
     },
-    "timestamp": 1416178632
+    "timestamp": 1416609377
   }
 }

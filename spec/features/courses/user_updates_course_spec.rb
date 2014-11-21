@@ -13,7 +13,7 @@ feature "Update course" do
     select(level.name, from: "Level")
     fill_in "Price", with: 0
     fill_in "Description", with: "Russian language course with focus on speaking"
-    click_on "Update Course"
+    click_on "Submit"
 
     expect(page).to have_content "Course updated successfully!"
   end
@@ -24,7 +24,7 @@ feature "Update course" do
 
     visit edit_course_path(course)
     fill_in "Name", with: ""
-    click_on "Update Course"
+    click_on "Submit"
 
     expect(page).to have_content "Name can't be blank"
   end
@@ -35,7 +35,7 @@ feature "Update course" do
 
     visit edit_course_path(course)
     fill_in "Price", with: ""
-    click_on "Update Course"
+    click_on "Submit"
 
     expect(page).to have_content "Price can't be blank"
   end
@@ -46,7 +46,7 @@ feature "Update course" do
 
     visit edit_course_path(course)
     fill_in "Description", with: ""
-    click_on "Update Course"
+    click_on "Submit"
 
     expect(page).to have_content "Description can't be blank"
   end
