@@ -25,9 +25,9 @@
 <h4>Taught By: <%= link_to @course.user.first_name + " " + @course.user.last_name, user_path(@course.user) %></h4>
 
 <% if !current_user || @course.class_members.where(user_id: current_user.id) == [] %>
-  <p><%= link_to "Enroll", new_course_class_member_path(@course) %></p>
+  <p><%= button_to "Enroll", new_course_class_member_path(@course), method: :get, class:"submit-button" %></p>
 <% else %>
-  <p><%= button_to "Leave Class", course_class_member_path(@course, current_user), method: :delete, data: { confirm: "Are your sure?" } %></p>
+  <p><%= button_to "Leave Class", course_class_member_path(@course, current_user), method: :delete, data: { confirm: "Are your sure?" }, class:"submit-button" %></p>
 <% end %>
 
 <h3>Reviews: </h3>
