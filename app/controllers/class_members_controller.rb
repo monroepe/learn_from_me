@@ -2,6 +2,7 @@ class ClassMembersController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    @course = Course.find(params[:course_id])
     @class_member = ClassMember.find(params[:id])
   end
 
