@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   resources :courses do
     resources :reviews
-    resources :class_members, only: [:index, :show, :new, :create, :destroy]
+    resources :class_members, only: [:show, :new, :create, :destroy]
   end
 end

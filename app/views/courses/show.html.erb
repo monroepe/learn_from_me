@@ -24,10 +24,19 @@
 
 <h4>Taught By: <%= link_to @course.user.first_name + " " + @course.user.last_name, user_path(@course.user) %></h4>
 
-<% if !current_user || @course.class_members.where(user_id: current_user.id) == [] %>
-  <p><%= button_to "Enroll", new_course_class_member_path(@course), method: :get, class:"submit-button" %></p>
-<% else %>
-  <p><%= button_to "Leave Class", course_class_member_path(@course, current_user), method: :delete, data: { confirm: "Are your sure?" }, class:"submit-button" %></p>
+<% if @course.user != current_user %>
+  <% if !current_user || @course.class_members.where(user_id: current_user.id) == [] %>
+    <p><%= button_to "Enroll", new_course_class_member_path(@course), method: :get, class:"submit-button" %></p>
+  <% else %>
+    <p><%= button_to "Leave Class", course_class_member_path(@course, current_user), method: :delete, data: { confirm: "Are your sure?" }, class:"submit-button" %></p>
+  <% end %>
+<% end %>
+
+<% if @course.user == current_user %>
+  <h3>Students: </h3>
+  <% @class_members.each do |class_member| %>
+    <p><%= link_to class_member.user.first_name + " " + class_member.user.last_name, course_class_member_path(@course, class_member) %></p>
+  <% end %>
 <% end %>
 
 <h3>Reviews: </h3>

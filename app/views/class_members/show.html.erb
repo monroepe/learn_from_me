@@ -1,0 +1,9 @@
+<h1><%= @class_member.user.first_name %> <%= @class_member.user.last_name %></h1>
+
+<h3>Qualifications: </h3>
+<%= @class_member.qualifications %>
+
+<% if @class_member.reason_for_joining %>
+  <h3>Reason for joining: </h3>
+  <%= @class_member.reason_for_joining %>
+<% end %>
