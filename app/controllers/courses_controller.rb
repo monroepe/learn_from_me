@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @reviews = @course.reviews.includes(:user)
+    @class_members = @course.class_members
   end
 
   def new

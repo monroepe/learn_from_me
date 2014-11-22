@@ -5,6 +5,7 @@ class ClassMembersController < ApplicationController
   end
 
   def show
+    @class_member = ClassMember.find(params[:id])
   end
 
   def new
