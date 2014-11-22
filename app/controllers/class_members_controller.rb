@@ -1,9 +1,6 @@
 class ClassMembersController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-  end
-
   def show
     @class_member = ClassMember.find(params[:id])
   end
