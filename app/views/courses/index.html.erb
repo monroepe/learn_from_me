@@ -1,9 +1,9 @@
-<h1>All Courses</h1>
+<h1>Courses</h1>
 
 <p><%= link_to "New course", new_course_path %></p>
 
 <% @courses.each do |course| %>
-  <li><%= link_to course.name, course_path(course) %></li>
+  <li><%= link_to course.name, course_path(course), class:"course-links" %></li>
 <% end %>
 
 <%= paginate @courses, window: 2 %>

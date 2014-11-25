@@ -3,5 +3,5 @@
 <h3>Recent Courses</h3>
 
 <% @courses.each do |course| %>
-  <li><%= link_to course.name, course_path(course) %> (<%= link_to course.subject.name, subject_path(course.subject) %>)</li>
+  <li><%= link_to course.name, course_path(course), class:"course-links" %> (<%= link_to course.subject.name, subject_path(course.subject), class:"subject-links" %>)</li>
 <% end %>
